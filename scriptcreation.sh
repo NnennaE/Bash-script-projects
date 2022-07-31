@@ -1,20 +1,22 @@
 #!/bin/bash
+#Author: Nnenna Eze
+#Date:21/07/2022
+#Description: A script that creates a new script
 
-echo " This script is used to create a new script"
+echo "This script used to  a create  a new script"
 echo
-read -p " Enter the name of the script " newscript
-read -p " Please enter your fullname " fullname
-reap -p " Describe what the script does " description
+read -p " enter the name of the script " newscript
+read -p " please enter your name " name
+read -p "Script description " description
 
-echo "#!/bin/bash" >> /home/Nnenna/myscripts/${newscript}
+
+echo "#!/bin/bash" >> /home/Nnenna/myscripts/${newscript} 
 echo
-echo "#Author:" $fullname >> /home/Nnenna/myscripts/${newscript
+echo "#Author: " $name >> /home/Nnenna/myscripts/${newscript}
 echo
-echo "#Date:" $`date` >> /home/Nnenna/myscripts/${newscript}
+echo "#date: " $`date` >> /home/Nnenna/myscripts/${newscript}
 echo
-echo "#Decription:" $description >> /home/Nnenna/myscripts/${newscript}
-echo
-echo "#Modified" $`date` >> /home/Nnenna/myscripts/${newscript}
-echo
-chmod +x ${newscript} 
+echo "#Description:" $description >> /home/Nnenna/myscripts/${newscript}
+echo "#modified:"  $`date` >> /home/Nnenna/myscripts/${newscript}
+chmod +x ${newscript}
 nano ${newscript}
